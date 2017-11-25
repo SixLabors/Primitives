@@ -13,12 +13,12 @@ namespace System
     /// </summary>
     /// <remarks>MathF emulation on platforms that don't support it natively.</remarks>
     // ReSharper disable InconsistentNaming
-    internal static class MathF
+    internal static class Math
     {
         /// <summary>
         /// Represents the ratio of the circumference of a circle to its diameter, specified by the constant, π.
         /// </summary>
-        public const float PI = (float)Math.PI;
+        public const float PI = System.Math.PI;
 
         /// <summary>
         /// Returns the absolute value of a single-precision floating-point number.

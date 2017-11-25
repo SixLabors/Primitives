@@ -221,10 +221,10 @@ namespace SixLabors.Primitives
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RectangleF Intersect(RectangleF a, RectangleF b)
         {
-            float x1 = MathF.Max(a.X, b.X);
-            float x2 = MathF.Min(a.Right, b.Right);
-            float y1 = MathF.Max(a.Y, b.Y);
-            float y2 = MathF.Min(a.Bottom, b.Bottom);
+            float x1 = Math.Max(a.X, b.X);
+            float x2 = Math.Min(a.Right, b.Right);
+            float y1 = Math.Max(a.Y, b.Y);
+            float y2 = Math.Min(a.Bottom, b.Bottom);
 
             if (x2 >= x1 && y2 >= y1)
             {
@@ -254,7 +254,7 @@ namespace SixLabors.Primitives
         /// </summary>
         /// <param name="rectangle">The source rectangle.</param>
         /// <param name="matrix">The transformation matrix.</param>
-        /// <returns>A transformed rectangle.</returns>
+        /// <returns>A transformed <see cref="RectangleF"/>.</returns>
         public static RectangleF Transform(RectangleF rectangle, Matrix3x2 matrix)
         {
             PointF bottomRight = PointF.Transform(new PointF(rectangle.Right, rectangle.Bottom), matrix);
@@ -271,10 +271,10 @@ namespace SixLabors.Primitives
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static RectangleF Union(RectangleF a, RectangleF b)
         {
-            float x1 = MathF.Min(a.X, b.X);
-            float x2 = MathF.Max(a.Right, b.Right);
-            float y1 = MathF.Min(a.Y, b.Y);
-            float y2 = MathF.Max(a.Bottom, b.Bottom);
+            float x1 = Math.Min(a.X, b.X);
+            float x2 = Math.Max(a.Right, b.Right);
+            float y1 = Math.Min(a.Y, b.Y);
+            float y2 = Math.Max(a.Bottom, b.Bottom);
 
             return new RectangleF(x1, y1, x2 - x1, y2 - y1);
         }
