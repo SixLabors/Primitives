@@ -267,10 +267,10 @@ namespace SixLabors.Primitives
             unchecked
             {
                 return new Rectangle(
-                    (int)MathF.Ceiling(rectangle.X),
-                    (int)MathF.Ceiling(rectangle.Y),
-                    (int)MathF.Ceiling(rectangle.Width),
-                    (int)MathF.Ceiling(rectangle.Height));
+                    (int)Math.Ceiling(rectangle.X),
+                    (int)Math.Ceiling(rectangle.Y),
+                    (int)Math.Ceiling(rectangle.Width),
+                    (int)Math.Ceiling(rectangle.Height));
             }
         }
 
@@ -316,10 +316,10 @@ namespace SixLabors.Primitives
             unchecked
             {
                 return new Rectangle(
-                    (int)MathF.Round(rectangle.X),
-                    (int)MathF.Round(rectangle.Y),
-                    (int)MathF.Round(rectangle.Width),
-                    (int)MathF.Round(rectangle.Height));
+                    (int)Math.Round(rectangle.X),
+                    (int)Math.Round(rectangle.Y),
+                    (int)Math.Round(rectangle.Width),
+                    (int)Math.Round(rectangle.Height));
             }
         }
 

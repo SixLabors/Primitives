@@ -220,7 +220,7 @@ namespace SixLabors.Primitives
         /// <param name="size">The size</param>
         /// <returns>The <see cref="Size"/></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Size Ceiling(SizeF size) => new Size(unchecked((int)MathF.Ceiling(size.Width)), unchecked((int)MathF.Ceiling(size.Height)));
+        public static Size Ceiling(SizeF size) => new Size(unchecked((int)Math.Ceiling(size.Width)), unchecked((int)Math.Ceiling(size.Height)));
 
         /// <summary>
         /// Converts a <see cref="SizeF"/> to a <see cref="Size"/> by performing a round operation on all the dimensions.
@@ -228,7 +228,7 @@ namespace SixLabors.Primitives
         /// <param name="size">The size</param>
         /// <returns>The <see cref="Size"/></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static Size Round(SizeF size) => new Size(unchecked((int)MathF.Round(size.Width)), unchecked((int)MathF.Round(size.Height)));
+        public static Size Round(SizeF size) => new Size(unchecked((int)Math.Round(size.Width)), unchecked((int)Math.Round(size.Height)));
 
         /// <summary>
         /// Transforms a size by the given matrix.

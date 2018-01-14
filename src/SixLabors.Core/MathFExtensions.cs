@@ -21,7 +21,7 @@ namespace SixLabors
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float DegreeToRadian(float degree)
         {
-            return degree * (MathF.PI / 180F);
+            return degree * ((float)Math.PI / 180F);
         }
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace SixLabors
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float RadianToDegree(float radian)
         {
-            return radian / (MathF.PI / 180F);
+            return radian / ((float)Math.PI / 180F);
         }
     }
 }
